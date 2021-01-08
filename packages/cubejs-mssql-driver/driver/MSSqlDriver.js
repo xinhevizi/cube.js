@@ -5,6 +5,9 @@ class MSSqlDriver extends BaseDriver {
   constructor(config) {
     super();
     this.config = {
+      authentication: {
+        type: "default"
+      },
       server: process.env.CUBEJS_DB_HOST,
       database: process.env.CUBEJS_DB_NAME,
       port: process.env.CUBEJS_DB_PORT && parseInt(process.env.CUBEJS_DB_PORT, 10),
